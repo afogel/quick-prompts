@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Quick Prompt Snippets",
+  "version": "1.0",
+  "description": "Quickly paste predefined prompt snippets into input fields to improve the quality of your prompts",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+.snippet-trigger {
+  position: fixed !important;
+  box-sizing: border-box !important;
+  width: 28px !important;
+  height: 28px !important;
+  padding: 6px !important;
+  background-color: white !important;
+  border: 1px solid hsl(240 5.9% 90%) !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 2147483640 !important;
+  font-size: 14px !important;
+  user-select: none !important;
+  transition: all 0.1s ease !important;
+  transform: translateY(-100%) !important;  /* Added this line */
+}
+
+.snippet-trigger:hover {
+  background-color: hsl(240 4.9% 97.6%) !important;
+  border-color: hsl(240 5.9% 86%) !important;
+}
+
+.snippet-dropdown {
+  position: fixed !important;
+  width: 220px !important;
+  background: white !important;
+  border: 1px solid hsl(240 5.9% 90%) !important;
+  border-radius: 6px !important;
+  box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1), 
+              0px 2px 4px -2px rgba(16, 24, 40, 0.06) !important;
+  z-index: 2147483641 !important;
+  display: none !important;
+  animation: snippetSlideIn 0.1s ease-out !important;
+  overflow: hidden !important;
+}
+
+@keyframes snippetSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.snippet-dropdown.active {
+  display: block !important;
+}
+
+.snippet-search {
+  width: 100% !important;
+  height: 40px !important;
+  padding: 8px 12px !important;
+  box-sizing: border-box !important;
+  border: none !important;
+  border-bottom: 1px solid hsl(240 4.9% 93.9%) !important;
+  font-size: 14px !important;
+  line-height: 24px !important;
+  color: hsl(240 10% 3.9%) !important;
+  background: white !important;
+  outline: none !important;
+}
+
+.snippet-search::placeholder {
+  color: hsl(240 3.8% 46.1%) !important;
+}
+
+.snippet-list {
+  max-height: 220px !important;
+  overflow-y: auto !important;
+  padding: 4px !important;
+}
+
+.snippet-item {
+  padding: 8px 12px !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  color: hsl(240 10% 3.9%) !important;
+  border-radius: 4px !important;
+  transition: all 0.1s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.snippet-item:hover {
+  background: hsl(240 4.9% 97.6%) !important;
+}
+
+/* Scrollbar styling */
+.snippet-list::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+.snippet-list::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+.snippet-list::-webkit-scrollbar-thumb {
+  background-color: hsl(240 4.9% 93.9%) !important;
+  border-radius: 4px !important;
+  border: 2px solid transparent !important;
+}
+
+.snippet-list::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(240 5.9% 86%) !important;
+}
