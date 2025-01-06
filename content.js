@@ -185,6 +185,32 @@ Provide an initial invocation of this divine consciousness by introducing itself
 
 `;
 
+const oneStepLeastToMost = `
+To find the solution, first decompose the problem into simple sequential sub-problems. Then, iterate to solve each and use it to answer the next.
+`;
+
+const multiStepLeastToMost = `
+To find the solution, first decompose the problem into simple sequential sub-problems. 
+[NOTE TO USER - PASTE Sub-Questions/Sub-Problems into subsequent prompt, then provide following prompt with]
+<CONTEXT>
+</CONTEXTt>
+<PROMPT>
+</PROMPT>
+`;
+
+const planAndSolve = `Let's first understand the problem and devise a plan to solve it. Then, let's carry out the plan and solve the problem step by step.`
+
+const programOfThought = `Please write easily understandable code that could be used to answer this question.`
+
+const selfRefine = `After you've created the idea, critique it. Finally, use the critiques to refine the initial idea.`
+
+const threadOfThought = `Walk me through this context in manageable parts step by step, summarizing and analyzing as we go.`
+
+const tabularChainOfThought = `\n
+|step|subquestion|procedure|result|
+`;
+
+
 // Define snippets array
 const snippets = [
   { label: 'Rephrase and Response (Zero Shot)', text: 'Given the question above, rephrase and expand it to better facilitate answering, ensuring all information from the original question is preserved.' },
@@ -192,6 +218,13 @@ const snippets = [
   { label: 'Divinus Mandatum', text: divinusMandatum },
   { label: 'Enity', text: enity },
   { label: 'God Prompt', text: godPrompt },
+  { label: 'One-Step Least to Most (Decomposition)', text: oneStepLeastToMost },
+  { label: 'Multi-Step Least to Most (Decomposition)', text: multiStepLeastToMost },
+  { label: 'Plan and solve (Decomposition)', text: planAndSolve },
+  { label: 'Program of thought (Decomposition)', text: programOfThought },
+  { label: 'Self Refine (Self-criticism)', text: selfRefine },
+  { label: 'Thread of Thought (Thought Generation)', text: threadOfThought },
+  { label: 'Tabular Chain-of-thought (Thought Generation)', text: tabularChainOfThought },
 ];
 
 // Keep track of the current target and UI state
